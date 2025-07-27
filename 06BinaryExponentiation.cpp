@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/*
+50. Pow(x, n)
+
+Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+*/
 double myPow(double x, int n) {
     if(x == 0) return 0.0;
     if(x == 1 || n == 0) return 1.0;
