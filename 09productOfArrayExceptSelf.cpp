@@ -13,18 +13,18 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 using namespace std;
 
 // Brute Force Approach
-// vector<int> productExceptSelf1(vector<int> nums) {
-//     int size = nums.size();
-//     vector<int> answer(size, 1);
-//     for (int i = 0; i < size; i++) {
-//         for (int j = 0; j < size; j++) {
-//             if(i != j) {
-//                 answer[i] *= nums[j];
-//             }
-//         }
-//     }
-//     return answer;
-// }
+vector<int> productExceptSelf1(vector<int> nums) {
+    int size = nums.size();
+    vector<int> answer(size, 1);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if(i != j) {
+                answer[i] *= nums[j];
+            }
+        }
+    }
+    return answer;
+}
 
 vector<int> productExceptSelf2(vector<int> &nums)
 {
