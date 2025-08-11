@@ -39,7 +39,7 @@ int majorityElement2(vector<int> nums)
     for (int i = 1; i < size; i++)
     {
         cout << nums[i] << ":" << i << endl;
-        if (nums[i] == nums[i + 1])
+        if (nums[i] == nums[i - 1])
         {
             occur++;
         }
@@ -112,9 +112,9 @@ int main()
     vector<int> arr = {2, 1, 2, 1, 2, 1, 1};
 
     // cout << majorityElement1(arr);
-    // cout << majorityElement2(arr);
+    cout << majorityElement2(arr);
     // cout << majorityElement3(arr);
-    cout << majorityElement4(arr);
+    // cout << majorityElement4(arr);
 
     return 0;
 }
