@@ -18,6 +18,7 @@ Note: The characters in the array beyond the returned length do not matter and s
 
 #include<iostream>
 #include<vector>
+#include<string>
 
 using namespace std;
 
