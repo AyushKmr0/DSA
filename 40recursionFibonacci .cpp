@@ -35,17 +35,17 @@ using namespace std;
 
 // TC : O(2ⁿ)  exact TC : O((1.618)ⁿ), SC: Depth of Recursive Tree(high of the
 // call stack) * Space/Memory in each call. O(n)
-int fact(int n) {
+int fib(int n) {
   if (n == 0 || n == 1) {
     return n;
   }
 
-  return fact(n - 1) + fact(n - 2);
+  return fib(n - 1) + fib(n - 2);
 }
 
 int main() {
   int n = 5;
-  cout << fact(n);
+  cout << fib(n);
 
   return 0;
 }
