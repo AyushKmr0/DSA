@@ -27,6 +27,7 @@ Constraints:
 
 using namespace std;
 
+// TC : O(n! * n), SC : O(n!)
 void getPerms(vector<int> &nums, int idx, vector<vector<int>> &ans)
 {
     if (idx == nums.size())
