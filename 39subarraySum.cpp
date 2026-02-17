@@ -65,6 +65,10 @@ int subarraySum2(vector<int>& nums, int k) {
       count += m[diff];
     }
 
+    if (m.find(prefixSum[j]) == m.end()) {
+      m[prefixSum[j]] = 0;
+    }
+
     m[prefixSum[j]]++;
   }
   return count;
