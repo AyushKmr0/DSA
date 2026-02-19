@@ -60,11 +60,12 @@ bool isSafe(vector<string> &board, int row, int n, int col)
             return false;
     }
 
-    return true;
+    return true; // Safe position
 }
 
 void nQueens(vector<string> &board, int row, int n, vector<vector<string>> &ans)
 {
+    // Base case
     if (row == n)
     {
         ans.push_back({board});
@@ -75,9 +76,9 @@ void nQueens(vector<string> &board, int row, int n, vector<vector<string>> &ans)
     {
         if (isSafe(board, row, n, j))
         {
-            board[row][j] = 'Q';
-            nQueens(board, row + 1, n, ans);
-            board[row][j] = '.';
+            board[row][j] = 'Q';             // Place queen
+            nQueens(board, row + 1, n, ans); // Recur for next row
+            board[row][j] = '.';             // Backtrack (remove queen)
         }
     }
 }
